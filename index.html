@@ -2,44 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Just a Game 💕</title>
+  <title>Quick Challenge 💗</title>
+
+  <!-- FAT FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<audio id="loveSong" loop>
-  <source src="song.mp3" type="audio/mpeg">
-</audio>
+<div class="container">
 
-<div class="game-container">
-  <h1>Catch the Hearts 💗</h1>
-  <p>Catch 5 hearts to unlock something special 🎀</p>
-  <p class="score">Score: <span id="score">0</span>/5</p>
-
-  <div id="game-area"></div>
-
-  <div id="surprise" class="hidden">
-    <h2>Surpriseee 💖</h2>
-    <p>
-      This started as a game…  
-      but loving you is my favorite thing to do every day.
-      You are my heart, my home, my forever 💕
-    </p>
-
-    <h3>Will you be my Valentine? 💘</h3>
-    <button class="yes-btn" onclick="finalReveal()">YES 💞</button>
+  <!-- SCREEN 1 -->
+  <div id="screen1">
+    <h1 class="big">DON’T CLICK 😳</h1>
+    <p>Wait for the countdown to finish</p>
+    <div id="countdown">5</div>
+    <button id="mainBtn">CLICK ME</button>
+    <p id="warning" class="hidden">Heyyy 😏 patience!</p>
   </div>
-</div>
 
-<div id="final" class="hidden">
-  <h1>I choose you 💗</h1>
-  <p>
-    Today. Tomorrow. Always.  
-    Happy Valentine’s Day, my love 🌸
-  </p>
-</div>
+  <!-- SCREEN 2 -->
+  <div id="screen2" class="hidden">
+    <h1 class="big">Wait…</h1>
+    <p>You weren’t supposed to wait…</p>
+    <p class="big pink">but you won my heart 💗</p>
+    <button onclick="nextScreen()">Continue 💕</button>
+  </div>
 
-<div class="falling-hearts"></div>
+  <!-- SCREEN 3 -->
+  <div id="screen3" class="hidden">
+    <h1 class="big">What happens next? 👀</h1>
+    <button onclick="choice()">I win 😌</button>
+    <button onclick="choice()">You win 👀</button>
+    <button onclick="choice()">We both win 💞</button>
+  </div>
+
+  <!-- SCREEN 4 -->
+  <div id="screen4" class="hidden">
+    <h1 class="big">Correct 😌</h1>
+    <p class="pink">Because loving you is always a win 💖</p>
+    <button onclick="nextValentine()">One last thing… 💘</button>
+  </div>
+
+  <!-- SCREEN 5 -->
+  <div id="screen5" class="hidden">
+    <h1 class="big">Will you be my Valentine? 💗</h1>
+    <button onclick="finalReveal()">YES 💞</button>
+    <button onclick="finalReveal()">OF COURSE 💕</button>
+    <button onclick="finalReveal()">OBVIOUSLY 😌</button>
+  </div>
+
+  <!-- FINAL SCREEN -->
+  <div id="final" class="hidden">
+    <h1 class="big">I choose you 💗</h1>
+    <p>Today. Tomorrow. Always.</p>
+  </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
